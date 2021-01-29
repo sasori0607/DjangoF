@@ -1,4 +1,55 @@
+html {
+  overflow-x: hidden!important;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
+
 body{
-    background: red;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+
+
+.myplus{
+width:80%;
+position: center
+}
+
+/* Настройка слайдера */
+.slaid{
+     margin: auto;
+     margin-top: 3% !important;
+     margin-bottom: 5%!important;
+     padding: 0px!important;
+     max-width:85%;
+
+}
+
+@media (max-width: 1200px){
+.slaid{
+max-width:80%;
+
+}
+}
+.slick-slide{
+    margin-right: 5px;
+}
+.navbar{
+    background: #00011b;
+}
+
+
+.slick-prev:before, .slick-next:before {
+    color: #00011b!important;
+}
+.footer{
+    margin-top: 5%;
+    background: #00011b!important;
+    height: 80px;
+}
+.footer img{
+    height: 80px;
+    position:absolut;
 
 }
