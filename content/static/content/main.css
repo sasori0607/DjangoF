@@ -1,5 +1,5 @@
 html {
-  overflow-x: hidden!important;
+overflow-x: hidden;
   margin-right: calc(-1 * (100vw - 100%));
 }
 
@@ -7,6 +7,9 @@ html {
 body{
     background: #ffffff;
     overflow-x: hidden;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -27,10 +30,7 @@ position: center
 }
 
 @media (max-width: 1200px){
-.slaid{
-max-width:80%;
-
-}
+.slaid{max-width:80%;}
 }
 .slick-slide{
     margin-right: 5px;
@@ -47,9 +47,32 @@ max-width:80%;
     margin-top: 5%;
     background: #00011b!important;
     height: 80px;
+    overflow-x: hidden;
+
 }
 .footer img{
     height: 80px;
     position:absolut;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+.footer  h5, a{
+    float: right;
+}
+
+.footer  h5{
+margin-top: 25px;
+color:#d91425;
+}
+
+.footer a{
+    opacity: 1;
+
+}
+
+.footer a  :hover {
+    opacity: 0.7!important;
 
 }
