@@ -1,0 +1,36 @@
+{% extends 'content/base.html' %}
+{% load static %}
+
+{% block title %} FFFFFFdsaf {% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="shop_products container ">
+    МАГАЗИН
+    <div class="row">
+        {% for product in products %}
+            <div class="shop_product col  border-right border-bottom pb-2" >
+                <h1 class="">{{ product.title }}</h1>
+    <!--            <p>{{product.description}}</p>-->
+                <div class = "img_sqe mx-auto">
+                {% if product.img %}
+                    <img src="{{ product.img.url }}" alt="{{ product.title }}">
+                {% else %}
+                    <img src="/pictures/default.png" alt="{{ product.title }}">
+                {% endif %}
+                </div>
+                <div class="row container mx-auto">
+                    <a href="{{product.get_absolute_url}}"><button  class="btn btn-warning my_btn_product ml-2">Детали</button></a>
+                    <a href="++" class="ml-5"><img src="{% static 'content/pictures/korz.png' %}" alt="+++"></a>
+
+
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

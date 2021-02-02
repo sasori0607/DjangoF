@@ -76,3 +76,42 @@ color:#d91425;
     opacity: 0.7!important;
 
 }
+
+@media (max-width: 476px){
+.shop_product{
+margin-left: auto;
+margin-right: auto!important;
+}}
+
+.shop_product{
+max-width: 250px;
+
+
+}
+
+.shop_products img{
+max-height: 200px;
+max-width: 200px;
+display: block;
+margin-left: auto;
+margin-right: auto
+
+
+
+}
+
+.img_sqe{
+height: 230px;
+width: 200px
+}
+
+.shop_product a img{
+width:40px
+}
+
+.shop_product a img:hover{
+transform: scale(1.2);
+}
+.my_btn_product {
+float: right!important;
+}

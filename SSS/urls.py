@@ -7,9 +7,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('content.urls'), name='home'),
     path('contacts/', include('content.urls')),
-    path('register', include('RegAndEntry.urls'))
+    path('register', include('RegAndEntry.urls')),
+    path('shop/', include('shop.urls')),
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_URL)
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_URL)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,54 @@
+{% extends 'content/base.html' %}
+{% load static %}
+
+{% block title %} FFFFFFdsaf {% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<!-- Возможна ошибка product замена на object решается-->
+<div class="container">
+ <h1>{{ product.title }}</h1>
+    <hr>
+    <div class="row">
+        <div class="col-6">
+            <div class=" responsive  slaid ">
+              <div>
+                {% if product.img %}
+                    <img src="{{ product.img.url }}" alt="{{ product.title }}">
+                {% else %}
+                    <img src="/pictures/default.png" alt="{{ product.title }}">
+                {% endif %}
+              </div>
+              <div>
+                <img src="http://placehold.it/350x300?text=2">
+              </div>
+              <div>
+                <img src="http://placehold.it/350x300?text=3">
+              </div>
+            </div>
+            <button class="btn btn-success m-2 ">Купить</button>
+        </div>
+        <div class="col float-right">
+            <div class="border p-2 m-2">
+                <h5>Описание товара</h5>
+                <hr>
+                <p>{{product.description}}</p>
+            </div>
+            <div class="border p-2 m-2">
+                <h5>Оплата </h5>
+                <hr>
+                <p>Наличная, Картой онлайн, Google Pay, Безналичными для юридических лиц, Безналичными для физических лиц, PrivatPay, Apple Pay</p>
+            </div>
+            <div class="border p-2 m-2">
+                <h5>Гарантия </h5>
+                <hr>
+                <p>Обмен/возврат товара в течение 14 дней</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
