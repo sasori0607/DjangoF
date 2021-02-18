@@ -27,44 +27,54 @@
 
       <div class="navbar-collapse collapse" id="navbarsExample06" style="">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Главная<span class="sr-only">(current)</span></a>
+          <li class="nav-item ">
+            <a class="nav-link" href="/">О нас<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/contacts/">Контакты</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link disabled" href="#">Disabled</a>-->
+<!--          </li>-->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown06" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Светильники/Товары</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown06">
-              <a class="dropdown-item" href="/shop">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Магазин</a>
+            <div class="dropdown-menu dropdown-menu_re" aria-labelledby="dropdownXxl">
+              <a class="dropdown-item" href="/shop">Все товары</a>
+              <a class="dropdown-item" href="/shop/night_light">Светильники</a>
+              <a class="dropdown-item" href="/shop/present">Подарок</a>
+              <a class="dropdown-item" href="/shop/toy">Игрушки</a>
             </div>
           </li>
         </ul>
-        <form class="form-inline my-2 my-md-0">
-          <input class="form-control" type="text" placeholder="Search">
-        </form>
+<!--        <form class="form-inline my-2 my-md-0">-->
+<!--          <input class="form-control" type="text" placeholder="Search">-->
+<!--        </form>-->
       </div>
     </nav>
+
 <div class="content">
 {% if messages %}
     {% for mess in messages %}
         <div class="alert alert-success">{{mess}}</div>
     {% endfor %}
 {% endif %}
+
 {% block body %}
 
+
 {% endblock %}
+
+
+
+
+
 </div>
 <footer class="footer">
   <div class="container ">
     <span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Поместите сюда липкий нижний колонтитул.</font></font></span>
-    <a href="#" ><img src="{% static 'content/pictures/konv.png' %}" alt="Напиши нам"></a> <h5>Напиши Нам</h5>
+
   </div>
+
 </footer>
 
 <!--    Все JS-->

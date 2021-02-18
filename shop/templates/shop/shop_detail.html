@@ -1,7 +1,7 @@
 {% extends 'content/base.html' %}
 {% load static %}
 
-{% block title %} FFFFFFdsaf {% endblock %}
+{% block title %} {{ product.title }} {% endblock %}
 
 {% block head %}
 
@@ -10,11 +10,20 @@
 {% block body %}
 <!-- Возможна ошибка product замена на object решается-->
 <div class="container">
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/shop">Главная</a></li>
+    <li class="breadcrumb-item"><a href="/shop/{{ product.category.slug }}">
+        {{ product.category }}
+    </a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ product.title }}</li>
+  </ol>
+</nav>
  <h1>{{ product.title }}</h1>
     <hr>
     <div class="row">
-        <div class="col-6">
-            <div class=" responsive  slaid ">
+        <div class="col-sm-7">
+            <div class="  responsive_2 slaid  detail_slaider">
               <div>
                 {% if product.img %}
                     <img src="{{ product.img.url }}" alt="{{ product.title }}">
@@ -22,14 +31,20 @@
                     <img src="/pictures/default.png" alt="{{ product.title }}">
                 {% endif %}
               </div>
-              <div>
-                <img src="http://placehold.it/350x300?text=2">
-              </div>
-              <div>
-                <img src="http://placehold.it/350x300?text=3">
-              </div>
+              {% for imag in product.images.all %}
+                <div>
+                    <img src="{{ imag.image.url }}" alt="{{ product.title }}">
+                </div>
+              {% endfor %}
+
             </div>
             <button class="btn btn-success m-2 ">Купить</button>
+
+
+
+
+
+
         </div>
         <div class="col float-right">
             <div class="border p-2 m-2">

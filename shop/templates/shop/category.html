@@ -1,0 +1,63 @@
+{% extends 'content/base.html' %}
+{% load static %}
+
+{% block title %} {{ slug }} {% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+ <div class="shop_products container ">
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/shop">Главная</a></li>
+    <li class="breadcrumb-item active" aria-current="page">
+        {% for product in products %}
+            {% if product.category.slug == slug %}
+                {% cycle product.category.title  as rowcolors %}
+
+            {% endif %}
+        {% endfor %}
+        {{ rowcolors }}
+    </li>
+  </ol>
+</nav>
+
+
+
+    <div class="row">
+            {% for product in products %}
+
+
+                {% if product.category.slug == slug %}
+                    <div class="shop_product col  border-right border-bottom pb-2" >
+                        <h1 class="">{{ product.title }}</h1>
+            <!--            <p>{{product.description}}</p>-->
+                        <div class = "img_sqe mx-auto">
+                        {% if product.img %}
+                            <img src="{{ product.img.url }}" alt="{{ product.title }}">
+                        {% else %}
+                            <img src="/pictures/default.png" alt="{{ product.title }}">
+                        {% endif %}
+                        </div>
+                        <div class="row container mx-auto">
+                            <a href="{{product.get_absolute_url}}"><button  class="btn btn-warning my_btn_product ml-2">Детали</button></a>
+                            <a href="++" class="ml-5"><img src="{% static 'content/pictures/korz.png' %}" alt="+++"></a>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+</div>
+
+{{ products_category }}
+{{ slug }}
+
+{{ columns }}
+
+
+
+
+
+{% endblock %}

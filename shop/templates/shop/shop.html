@@ -9,7 +9,11 @@
 
 {% block body %}
 <div class="shop_products container ">
-    МАГАЗИН
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Главная</li>
+  </ol>
+</nav>
     <div class="row">
         {% for product in products %}
             <div class="shop_product col  border-right border-bottom pb-2" >

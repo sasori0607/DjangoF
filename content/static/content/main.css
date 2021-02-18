@@ -85,8 +85,6 @@ margin-right: auto!important;
 
 .shop_product{
 max-width: 250px;
-
-
 }
 
 .shop_products img{
@@ -95,8 +93,6 @@ max-width: 200px;
 display: block;
 margin-left: auto;
 margin-right: auto
-
-
 
 }
 
@@ -112,6 +108,87 @@ width:40px
 .shop_product a img:hover{
 transform: scale(1.2);
 }
+
 .my_btn_product {
 float: right!important;
+}
+
+.detail_slaider{
+text-align: center;
+}
+
+.detail_slaider img{
+margin: auto;
+display: flex;
+position:sticky;
+top: 150px;
+max-width: 100%;
+max-height: calc(60vh - 100px);
+
+
+}
+
+
+
+
+.responsive_2 img{
+display: block;
+margin-left: auto;
+margin-right: auto
+}
+.dropdown-menu{
+    padding: 0px!important;
+    background: #00011b;
+}
+
+.dropdown-item{
+color: #ffffff;
+width:auto;
+}
+
+.mess{
+
+height:auto;
+width: 120px;
+position: fixed;
+right: 15px;
+bottom: 10px;
+}
+
+.mess img{
+width: 100%;
+height:auto;
+}
+
+
+
+.mess_txt{
+position: fixed;
+display: none;
+bottom: 10px;
+right: 20px;
+}
+
+.mess:hover .mess_txt{
+display: block;
+}
+.mess:hover {
+
+}
+.dropdown-item{
+color : rgba(255,255,255,.5);
+}
+
+.dropdown-item:hover{
+background:none;
+color : rgba(255,255,255);
+}
+
+.bbb{
+display:none;
+}
+
+.breadcrumb{
+background:none;
+font-size: 150%;
 }
