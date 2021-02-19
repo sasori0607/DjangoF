@@ -15,8 +15,8 @@ body{
 
 
 .myplus{
-width:80%;
-position: center
+    width:80%;
+    position: center
 }
 
 /* Настройка слайдера */
@@ -30,7 +30,7 @@ position: center
 }
 
 @media (max-width: 1200px){
-.slaid{max-width:80%;}
+    .slaid{max-width:80%;}
 }
 .slick-slide{
     margin-right: 5px;
@@ -63,78 +63,116 @@ position: center
 }
 
 .footer  h5{
-margin-top: 25px;
-color:#d91425;
+    margin-top: 25px;
+    color:#d91425;
 }
 
 .footer a{
     opacity: 1;
-
 }
 
 .footer a  :hover {
     opacity: 0.7!important;
+}
+
+
+
+.shop_product{
+    min-width: 240px;
+    max-width: 240px;
 
 }
 
-@media (max-width: 476px){
-.shop_product{
-margin-left: auto;
-margin-right: auto!important;
+@media (min-width: 1201px){
+.cheak{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto!important;
 }}
 
-.shop_product{
-max-width: 250px;
+
+@media (max-width: 1200px){
+.cheak{
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto!important;
+}}
+
+@media (max-width: 767px){
+.cheak{
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto!important;
+}}
+
+@media (max-width: 479px){
+.cheak{
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto!important;
+}}
+
+@media (max-width: 479px){
+    .shop_product{
+        width:500px;
+        border-right: none!important;
+        margin-left: auto;
+        margin-right: auto!important;
+}}
+
+.shop_products  img{
+    max-height: 200px;
+    max-width: 200px;
+    width: auto;
+    display: block;
+    float: none;
+      display: block;
+    margin-left: auto!important;
+    margin-right: auto;
+
+}
+.Href{
+    display:block;
+    position: absolute;
+    height: auto;
+    height: 200px;
+    width: 200px;
 }
 
-.shop_products img{
-max-height: 200px;
-max-width: 200px;
-display: block;
-margin-left: auto;
-margin-right: auto
 
-}
 
 .img_sqe{
-height: 230px;
-width: 200px
+    height: 230px;
+    width: 200px
 }
 
-.shop_product a img{
-width:40px
-}
+
 
 .shop_product a img:hover{
-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .my_btn_product {
-float: right!important;
+    float: right!important;
 }
 
 .detail_slaider{
-text-align: center;
+    text-align: center;
 }
 
 .detail_slaider img{
-margin: auto;
-display: flex;
-position:sticky;
-top: 150px;
-max-width: 100%;
-max-height: calc(60vh - 100px);
-
-
+    margin: auto;
+    display: flex;
+    position:sticky;
+    top: 150px;
+    max-width: 100%;
+    max-height: calc(60vh - 100px);
 }
 
-
-
-
 .responsive_2 img{
-display: block;
-margin-left: auto;
-margin-right: auto
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 .dropdown-menu{
     padding: 0px!important;
@@ -142,53 +180,83 @@ margin-right: auto
 }
 
 .dropdown-item{
-color: #ffffff;
-width:auto;
+    color: #ffffff;
+    width:auto;
 }
 
 .mess{
-
-height:auto;
-width: 120px;
-position: fixed;
-right: 15px;
-bottom: 10px;
+    height:auto;
+    width: 120px;
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
 }
 
 .mess img{
-width: 100%;
-height:auto;
+    width: 100%;
+    height:auto;
 }
 
 
 
 .mess_txt{
-position: fixed;
-display: none;
-bottom: 10px;
-right: 20px;
+    position: fixed;
+    display: none;
+    bottom: 10px;
+    right: 20px;
 }
 
 .mess:hover .mess_txt{
-display: block;
+    display: block;
 }
-.mess:hover {
 
-}
+
+
 .dropdown-item{
-color : rgba(255,255,255,.5);
+    color : rgba(255,255,255,.5);
 }
 
 .dropdown-item:hover{
-background:none;
-color : rgba(255,255,255);
+    background:none;
+    color : rgba(255,255,255);
 }
 
-.bbb{
-display:none;
-}
+
 
 .breadcrumb{
-background:none;
-font-size: 150%;
+    background:none;
+    font-size: 150%;
+}
+
+.form_main_page_mess:target {
+    display: block;
+}
+
+.form_main_page_mess {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 210px;
+    height: 420px;
+    margin-bottom: 1vh;
+    margin-right: 2vh;
+    background: white;
+    display: none;
+    border-radius: 8px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.x_form{
+    color:red;
+}
+
+.input_btn{
+border-radius: 3px;
+margin-left:50%;
+
+}
+
+.korz{
+    max-width:40px!important;
+
 }

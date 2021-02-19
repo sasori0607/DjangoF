@@ -74,10 +74,40 @@
   </div>
 
 
+
+
 </div>
 
-    <div class="mess container">
-        <a href="#" class="mess"><img src="{% static 'content/pictures/konv.png' %}" alt="Напиши нам"></a>
-        <h6 class=" mess_txt"> Напишите нам</h6>
+    <div class="mess container " tabindex="-1">
+        <div class="mess">
+          <a href="#form"><img src="{% static 'content/pictures/konv.png' %}" alt="Напиши нам"></a>
+          <h6 class=" mess_txt"> Напишите нам</h6>
+          <div class="form_main_page_mess " id="form">
+            <form action="" method="POST" class="form-group col-sm-12 ">
+              <div>
+                <a href="#f" class="x_form">X</a>
+              </div>
+              <div class="">
+                <h5 class="m-1 mt-3">Спрашивайте о всем</h5>
+                {% csrf_token %}
+                {{ form.as_p }}
+              </div>
+
+              <input class="input_btn" type="Submit" name="submit" value="Submit"/>
+              </form>
+
+              {% if submitbutton == "Submit" %}
+                <h1>Your first name is {{ firstname }}</h1>
+                <h1>Your last name is {{ lastname }}</h1>
+                <h1>Your email is {{ emailvalue }}</h1>
+              {% endif %}
+          </div>
+
+        </div>
+
+
+
     </div>
+
+
 {% endblock %}

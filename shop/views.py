@@ -11,7 +11,7 @@ def shop_main0(reqest):
 
 
 class Shop_main(ListView):
-    paginate_by = 4 #количество элементов на странице
+    paginate_by = 8 #количество элементов на странице
     model = Product
     template_name = 'shop/shop.html'
     context_object_name = 'products'
